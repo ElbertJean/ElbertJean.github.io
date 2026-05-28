@@ -1,77 +1,915 @@
-@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Space+Mono:wght@400;700&display=swap');
 
 :root {
-  --primary-color: #18181B;
-  --secondary-color: #3F3F46;
-  --cta-color: #2563EB;
-  --bg-color: #FAFAFA;
-  --text-color: #09090B;
+  --bg-color: #0f0b1e;
+  --bg-card: #1c1535;
+  --bg-card-light: #2c224f;
+  --text-primary: #ffffff;
+  --text-secondary: #a9a2c9;
+
+  /* SNES Controller Button Colors */
+  --snes-red: #ff4757;
+  --snes-yellow: #ffa502;
+  --snes-blue: #1e90ff;
+  --snes-green: #2ed573;
+  --snes-gray: #747d8c;
+
+  --border-color: #000000;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  margin: 0;
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: 'Space Mono', monospace;
   background-color: var(--bg-color);
-  color: var(--text-color);
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  color: var(--text-primary);
+  line-height: 1.6;
+  overflow-x: hidden;
+  image-rendering: pixelated;
 }
 
-.App {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+/* CRT Scanlines Overlay */
+body::after {
+  content: " ";
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+  aspect-ratio: 16/9;
+  background-size: 100% 4px, 6px 100%;
+  pointer-events: none;
+  z-index: 99999;
+  opacity: 0.45;
 }
 
-.hero {
-  flex: 1;
+/* Pixel Box (NES/SNES Styled) */
+.pixel-box {
+  position: relative;
+  border-style: solid;
+  border-width: 4px;
+  border-color: var(--border-color);
+  border-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="6" height="6"><path d="M0 2h2v2H0zM2 0h2v2H2zM4 2h2v2H4zM2 4h2v2H2z" fill="%23000000"/></svg>') 2 repeat;
+  background-color: var(--bg-card);
+  padding: 1.5rem;
+  box-shadow: 0 6px 0 rgba(0, 0, 0, 0.4);
+}
+
+.pixel-box.light {
+  background-color: var(--bg-card-light);
+}
+
+.pixel-box-header {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 0.95rem;
+  color: var(--snes-yellow);
+  margin-bottom: 1.25rem;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 0px #000;
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Titles */
+h1,
+h2,
+h3,
+h4 {
+  font-family: 'Press Start 2P', cursive;
+  text-transform: uppercase;
+  letter-spacing: -0.05em;
+  margin-bottom: 1rem;
+}
+
+.section-title {
+  font-size: clamp(1rem, 4vw, 1.5rem);
+  /* responsive font size to prevent overflow on mobile */
+  color: var(--snes-green);
+  margin-bottom: 3rem;
+  text-shadow: 3px 3px 0px #000;
+  display: flex;
+  align-items: center;
   justify-content: center;
-  align-items: flex-start;
-  padding: 0 10%;
-  background: linear-gradient(135deg, #FAFAFA 0%, #F4F4F5 100%);
+  gap: 1rem;
+  white-space: nowrap;
 }
 
-.hero-title {
-  font-family: 'Archivo', sans-serif;
-  font-size: clamp(3rem, 8vw, 6rem);
-  font-weight: 700;
-  line-height: 1.1;
-  margin: 0;
-  color: var(--primary-color);
-  letter-spacing: -0.02em;
+.section-title::after {
+  content: "====";
+  color: var(--snes-red);
 }
 
-.hero-subtitle {
-  font-size: clamp(1.25rem, 3vw, 2rem);
-  font-weight: 400;
-  color: var(--secondary-color);
-  margin-top: 1rem;
-  margin-bottom: 2rem;
-  max-width: 600px;
+.section-title::before {
+  content: "====";
+  color: var(--snes-blue);
 }
 
-.cta-button {
-  background-color: var(--cta-color);
-  color: #FFFFFF;
-  border: none;
-  padding: 1rem 2.5rem;
-  font-size: 1.125rem;
-  font-family: 'Space Grotesk', sans-serif;
-  font-weight: 600;
-  border-radius: 8px;
-  cursor: pointer;
+/* Fixed Floating Navbar */
+.navbar-container {
+  position: fixed;
+  top: 1rem;
+  left: 5%;
+  right: 5%;
+  z-index: 1000;
+  backdrop-filter: blur(8px);
+  background-color: rgba(28, 21, 53, 0.85);
+  transition: all 0.3s ease;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 1.5rem;
+}
+
+.navbar-logo {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 0.8rem;
+  color: var(--snes-red);
+  text-decoration: none;
+  text-shadow: 2px 2px 0px #000;
+  animation: logo-glow 2s infinite ease-in-out;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 1rem;
+}
+
+.nav-item a {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 0.6rem;
+  color: var(--text-primary);
+  text-decoration: none;
+  padding: 0.5rem;
   transition: all 0.2s ease;
-  box-shadow: 0 4px 6px -1px rgba(37, 99, 235, 0.1), 0 2px 4px -1px rgba(37, 99, 235, 0.06);
+  display: block;
 }
 
-.cta-button:hover {
-  background-color: #1D4ED8;
+.nav-item a:hover,
+.nav-item a.active {
+  color: var(--snes-yellow);
   transform: translateY(-2px);
-  box-shadow: 0 10px 15px -3px rgba(37, 99, 235, 0.2), 0 4px 6px -2px rgba(37, 99, 235, 0.1);
 }
 
-.cta-button:active {
-  transform: translateY(0);
+.menu-toggle-btn {
+  display: none !important;
+}
+
+/* Buttons (SNES Controller Style) */
+.btn-pixel {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 0.7rem;
+  padding: 0.85rem 1.5rem;
+  border-style: solid;
+  border-width: 4px;
+  border-color: var(--border-color);
+  border-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="6" height="6"><path d="M0 2h2v2H0zM2 0h2v2H2zM4 2h2v2H4zM2 4h2v2H2z" fill="%23000000"/></svg>') 2 repeat;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background-color: var(--snes-gray);
+  box-shadow: 0 4px 0 #000;
+  transition: all 0.1s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+}
+
+.btn-pixel:active {
+  transform: translateY(4px);
+  box-shadow: none;
+}
+
+.btn-red {
+  background-color: var(--snes-red);
+}
+
+.btn-yellow {
+  background-color: var(--snes-yellow);
+  color: #000;
+}
+
+.btn-blue {
+  background-color: var(--snes-blue);
+}
+
+.btn-green {
+  background-color: var(--snes-green);
+  color: #000;
+}
+
+.btn-red:hover {
+  background-color: #ff6b81;
+}
+
+.btn-yellow:hover {
+  background-color: #eccc68;
+}
+
+.btn-blue:hover {
+  background-color: #70a1ff;
+}
+
+.btn-green:hover {
+  background-color: #7bed9f;
+}
+
+/* Grid & Structure */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 5rem 2rem;
+}
+
+/* Sections spacing */
+section {
+  padding: 4rem 0;
+  border-bottom: 4px dashed var(--bg-card-light);
+}
+
+/* HERO SECTION */
+.hero-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 3rem;
+  align-items: center;
+  min-height: calc(100vh - 100px);
+  padding-top: 6rem;
+}
+
+.hero-avatar-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-avatar-frame {
+  max-width: 320px;
+  width: 100%;
+  aspect-ratio: 0.8;
+  background-color: #000;
+  padding: 8px;
+  box-shadow: 0 10px 0 rgba(0, 0, 0, 0.5);
+  animation: float 4s infinite ease-in-out;
+}
+
+.hero-avatar {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  image-rendering: pixelated;
+  border: 4px solid var(--text-primary);
+}
+
+.hero-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-tag {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 0.65rem;
+  color: var(--snes-blue);
+  margin-bottom: 0.75rem;
+  text-shadow: 1px 1px 0px #000;
+}
+
+.hero-name {
+  font-size: 2.2rem;
+  line-height: 1.2;
+  color: var(--text-primary);
+  text-shadow: 4px 4px 0px #000;
+  margin-bottom: 1.5rem;
+}
+
+.hero-desc {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  margin-bottom: 2rem;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+/* ABOUT ME SECTION */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 2rem;
+}
+
+.rpg-dialog {
+  position: relative;
+  font-size: 0.95rem;
+  line-height: 1.8;
+}
+
+.rpg-dialog p {
+  margin-bottom: 1rem;
+}
+
+.skills-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.skill-bar-container {
+  margin-bottom: 0.5rem;
+}
+
+.skill-name {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 0.55rem;
+  margin-bottom: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.pixel-progress-bg {
+  height: 20px;
+  background-color: #000;
+  border: 2px solid var(--text-primary);
+  padding: 2px;
+}
+
+.pixel-progress-fill {
+  height: 100%;
+  background-color: var(--snes-green);
+  transition: width 1s ease-in-out;
+}
+
+/* ACHIEVEMENTS (FORMAÇÃO) */
+.achievements-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.achievement-card {
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+}
+
+.achievement-icon {
+  width: 64px;
+  height: 64px;
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid var(--snes-yellow);
+  box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.5);
+  flex-shrink: 0;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 1.5rem;
+  color: var(--snes-yellow);
+}
+
+.achievement-details h3 {
+  font-size: 0.8rem;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.achievement-details .institution {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 0.55rem;
+  color: var(--snes-blue);
+  margin-bottom: 0.5rem;
+}
+
+.achievement-details .year {
+  font-size: 0.8rem;
+  color: var(--snes-yellow);
+  font-weight: bold;
+}
+
+/* EXPERIENCE (QUEST LOG) */
+.quest-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.quest-item {
+  position: relative;
+}
+
+.quest-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px dashed rgba(255, 255, 255, 0.1);
+  padding-bottom: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.quest-title-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.quest-status {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 0.55rem;
+  padding: 0.25rem 0.5rem;
+  border: 2px solid var(--snes-green);
+  color: var(--snes-green);
+  text-transform: uppercase;
+}
+
+.quest-status.ongoing {
+  border-color: var(--snes-yellow);
+  color: var(--snes-yellow);
+}
+
+.quest-title {
+  font-size: 0.85rem;
+  margin-bottom: 0;
+  color: var(--snes-blue);
+}
+
+.quest-company {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 0.6rem;
+  color: var(--text-primary);
+}
+
+.quest-date {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
+.quest-tasks {
+  list-style: none;
+}
+
+.quest-tasks li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.quest-tasks li::before {
+  content: "▶";
+  position: absolute;
+  left: 0;
+  color: var(--snes-red);
+  font-size: 0.8rem;
+}
+
+/* EVINIL FEATURED (BOSS STAGE) */
+.evinil-showcase {
+  background: linear-gradient(180deg, #231942 0%, #17102e 100%);
+  border-color: var(--snes-red);
+}
+
+.evinil-layout {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.evinil-graphic {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.evinil-cartridge {
+  width: 280px;
+  height: 200px;
+  background-color: #57606f;
+  border: 6px solid #000;
+  border-radius: 8px;
+  box-shadow: 0 10px 0 rgba(0, 0, 0, 0.6);
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+}
+
+.evinil-cartridge::before {
+  content: " ";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 180px;
+  height: 20px;
+  background-color: #2f3542;
+  border-bottom: 4px solid #000;
+}
+
+.evinil-label {
+  margin-top: 15px;
+  height: 110px;
+  background: linear-gradient(45deg, #1e1e24 25%, #ff4757 25%, #ff4757 75%, #1e1e24 75%);
+  border: 4px solid #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 1rem;
+  text-shadow: 2px 2px 0px #000;
+  letter-spacing: 0.1em;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.8);
+}
+
+.evinil-vinyl {
+  width: 160px;
+  height: 160px;
+  background-color: #111;
+  border-radius: 50%;
+  border: 6px solid #000;
+  box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.4);
+  position: absolute;
+  right: 10px;
+  bottom: -20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: spin 6s infinite linear;
+}
+
+.vinyl-grooves {
+  width: 120px;
+  height: 120px;
+  border: 2px dashed #333;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.vinyl-label {
+  width: 50px;
+  height: 50px;
+  background-color: var(--snes-red);
+  border-radius: 50%;
+  border: 3px solid #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.vinyl-center {
+  width: 12px;
+  height: 12px;
+  background-color: var(--bg-color);
+  border-radius: 50%;
+  border: 2px solid #000;
+}
+
+.evinil-desc {
+  font-size: 0.95rem;
+}
+
+.evinil-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1.5rem 0;
+}
+
+.evinil-tag {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 0.5rem;
+  padding: 0.4rem 0.6rem;
+  background-color: rgba(0, 0, 0, 0.3);
+  border: 2px solid var(--snes-blue);
+  color: var(--snes-blue);
+}
+
+/* HOBBIES (INVENTORY SYSTEM) */
+.hobbies-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.inventory-card {
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.inventory-card:hover {
+  transform: translateY(-5px);
+}
+
+.inventory-icon {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.inventory-card h3 {
+  font-size: 0.8rem;
+  color: var(--snes-yellow);
+  margin-bottom: 0.75rem;
+}
+
+.inventory-card p {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+/* SKILLS GRID AND BADGES */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.skill-badge {
+  display: inline-block;
+  font-family: 'Space Mono', monospace;
+  font-size: 0.8rem;
+  padding: 0.35rem 0.7rem;
+  margin: 0.3rem 0.2rem;
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 2px solid var(--text-secondary);
+  color: var(--text-primary);
+  transition: all 0.2s ease;
+}
+
+.skill-badge:hover {
+  border-color: var(--snes-yellow);
+  color: var(--snes-yellow);
+  transform: translateY(-2px);
+}
+
+/* CONTACT (SAVE SCREEN) */
+.contact-container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.contact-desc {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 0.95rem;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 0.55rem;
+  display: block;
+  margin-bottom: 0.5rem;
+  color: var(--snes-blue);
+}
+
+.input-pixel {
+  width: 100%;
+  font-family: 'Space Mono', monospace;
+  font-size: 0.95rem;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-style: solid;
+  border-width: 4px;
+  border-color: var(--border-color);
+  border-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="6" height="6"><path d="M0 2h2v2H0zM2 0h2v2H2zM4 2h2v2H4zM2 4h2v2H2z" fill="%23000000"/></svg>') 2 repeat;
+  color: #fff;
+  padding: 0.75rem 1rem;
+  outline: none;
+}
+
+.input-pixel:focus {
+  border-color: var(--snes-yellow);
+}
+
+.btn-submit-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+/* FOOTER */
+.footer {
+  background-color: #05030a;
+  padding: 4rem 2rem;
+  text-align: center;
+  border-top: 4px solid var(--border-color);
+}
+
+.footer-logo {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 1.2rem;
+  color: var(--snes-red);
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 0px #000;
+}
+
+.footer-socials {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.social-link {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 0.6rem;
+  color: var(--snes-blue);
+  text-decoration: none;
+}
+
+.social-link:hover {
+  color: var(--snes-yellow);
+}
+
+.footer-copyright {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 0.5rem;
+  color: var(--snes-gray);
+  margin-top: 2rem;
+}
+
+/* ANIMATIONS */
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes logo-glow {
+  0% {
+    text-shadow: 2px 2px 0px #000, 0 0 5px rgba(255, 71, 87, 0.4);
+  }
+
+  50% {
+    text-shadow: 2px 2px 0px #000, 0 0 15px rgba(255, 71, 87, 0.8);
+  }
+
+  100% {
+    text-shadow: 2px 2px 0px #000, 0 0 5px rgba(255, 71, 87, 0.4);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 900px) {
+  .section-title {
+    font-size: clamp(0.9rem, 4vw, 1.2rem);
+    white-space: normal;
+    text-align: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .quest-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+
+  .quest-title-container {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .quest-date {
+    font-size: 0.75rem;
+    color: var(--snes-yellow);
+  }
+
+  .hero-wrapper {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding-top: 8rem;
+    text-align: center;
+  }
+
+  .hero-avatar-frame {
+    max-width: 240px;
+  }
+
+  .hero-actions {
+    justify-content: center;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .achievements-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .evinil-layout {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .evinil-vinyl {
+    display: none;
+    /* Hide spinning vinyl on smaller screens to prevent overlap issues */
+  }
+
+  .menu-toggle-btn {
+    display: inline-flex !important;
+    font-size: 0.6rem;
+    padding: 0.4rem 0.8rem;
+    box-shadow: 0 2px 0 #000;
+  }
+  
+  .menu-toggle-btn:active {
+    transform: translateY(2px);
+    box-shadow: none;
+  }
+
+  .navbar-container {
+    left: 4%;
+    right: 4%;
+    top: 0.5rem;
+    padding: 0.5rem 1rem;
+  }
+
+  .navbar {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    width: 100%;
+    flex-wrap: wrap;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    gap: 0.25rem;
+    margin-top: 0.75rem;
+    border-top: 2px dashed rgba(255, 255, 255, 0.1);
+    padding-top: 0.75rem;
+    align-items: center;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .nav-item {
+    width: 100%;
+    text-align: center;
+  }
+  
+  .nav-item a {
+    font-size: 0.65rem;
+    padding: 0.4rem;
+  }
+}
+
+/* Hide side decorations on very small screens to fit text */
+@media (max-width: 600px) {
+  .section-title::before,
+  .section-title::after {
+    display: none;
+  }
 }
