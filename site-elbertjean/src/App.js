@@ -1,23 +1,20 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
+      <main className="hero">
+        <h1 className="hero-title">
+          Olá, eu sou<br />Elbert Jean.
+        </h1>
+        <p className="hero-subtitle">
+          Desenvolvedor de Software focado em criar experiências digitais vibrantes e modernas.
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <button className="cta-button" onClick={() => alert('Em breve!')}>
+          Ver Meus Projetos
+        </button>
+      </main>
     </div>
   );
 }
