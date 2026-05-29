@@ -180,6 +180,7 @@ function App() {
                 <span className="skill-badge">Tailwind CSS</span>
                 <span className="skill-badge">Material UI</span>
                 <span className="skill-badge">Angular</span>
+                <span className="skill-badge">Vue.js</span>
                 <span className="skill-badge">Leaflet</span>
                 <span className="skill-badge">Recharts</span>
               </div>
@@ -193,8 +194,11 @@ function App() {
                 <span className="skill-badge">PostgreSQL</span>
                 <span className="skill-badge">MySQL</span>
                 <span className="skill-badge">Node.js</span>
+                <span className="skill-badge">Express</span>
                 <span className="skill-badge">Java</span>
+                <span className="skill-badge">Spring Boot</span>
                 <span className="skill-badge">Python</span>
+                <span className="skill-badge">APIs RESTful</span>
               </div>
             </div>
 
@@ -211,7 +215,6 @@ function App() {
                 <span className="skill-badge">AWS</span>
                 <span className="skill-badge">Vercel</span>
                 <span className="skill-badge">Supabase</span>
-                <span className="skill-badge">APIs REST</span>
                 <span className="skill-badge">Jira</span>
                 <span className="skill-badge">Notion</span>
                 <span className="skill-badge">Excalidraw</span>
@@ -223,6 +226,8 @@ function App() {
               <div className="pixel-box-header" style={{ color: 'var(--snes-yellow)' }}>🤖 INTELIGÊNCIA ARTIFICIAL</div>
               <div style={{ marginTop: '1rem' }}>
                 <span className="skill-badge">Gemini</span>
+                <span className="skill-badge">Claude</span>
+                <span className="skill-badge">Antigravity IDE</span>
                 <span className="skill-badge">GitHub Copilot</span>
                 <span className="skill-badge">Agentes Autônomos</span>
                 <span className="skill-badge">Engenharia de Prompt</span>
