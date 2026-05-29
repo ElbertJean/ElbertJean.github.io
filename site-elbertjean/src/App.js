@@ -77,14 +77,14 @@ function App() {
             <span className="hero-tag">[ PLAYER 1 - READY ]</span>
             <h1 className="hero-name">ELBERT JEAN DOS SANTOS</h1>
             <h2 className="hero-tag" style={{ color: 'var(--snes-yellow)', fontSize: '0.8rem', marginBottom: '1.5rem' }}>
-              DESENVOLVEDOR FRONT-END PLENO // ESPECIALISTA REACT & TS
+              DESENVOLVEDOR FRONT-END PLENO
             </h2>
             <p className="hero-desc">
               Com 29 anos, residente de São José dos Campos/SP e <strong>3 anos de sólida experiência em Front-End</strong>, desenvolvo interfaces de alta performance, dashboards complexos e visualizações de dados interativas orientadas a mapas georreferenciados.
             </p>
             <div className="hero-actions">
-              <a href="#evinil" className="btn-pixel btn-red">BOSS STAGE: EVINIL</a>
               <a href="#experiencia" className="btn-pixel btn-blue">VER MISSÕES (PORTFÓLIO)</a>
+              <a href="#evinil" className="btn-pixel btn-red">BOSS STAGE: EVINIL</a>
             </div>
           </div>
         </div>
@@ -213,6 +213,23 @@ function App() {
                 <span className="skill-badge">Vercel</span>
                 <span className="skill-badge">Supabase</span>
                 <span className="skill-badge">APIs REST</span>
+                <span className="skill-badge">Jira</span>
+                <span className="skill-badge">Notion</span>
+                <span className="skill-badge">Excalidraw</span>
+              </div>
+            </div>
+
+            {/* AI and Agents */}
+            <div className="pixel-box">
+              <div className="pixel-box-header" style={{ color: 'var(--snes-yellow)' }}>🤖 INTELIGÊNCIA ARTIFICIAL</div>
+              <div style={{ marginTop: '1rem' }}>
+                <span className="skill-badge">Gemini</span>
+                <span className="skill-badge">GitHub Copilot</span>
+                <span className="skill-badge">Agentes Autônomos</span>
+                <span className="skill-badge">Engenharia de Prompt</span>
+                <span className="skill-badge">Google AI Studio</span>
+                <span className="skill-badge">NotebookLM</span>
+                <span className="skill-badge">Stitch</span>
               </div>
             </div>
           </div>
@@ -425,8 +442,8 @@ function App() {
             <p className="contact-desc">
               Entre em contato para iniciarmos uma nova quest ou cooperação técnica!
             </p>
-            <form onSubmit={(e) => { 
-              e.preventDefault(); 
+            <form onSubmit={(e) => {
+              e.preventDefault();
               const name = e.target.elements.nome.value;
               const message = e.target.elements.mensagem.value;
               const whatsappText = `Olá Elbert! Sou o ${name}.\n\nMensagem:\n${message}`;
