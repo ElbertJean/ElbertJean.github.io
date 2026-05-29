@@ -34,7 +34,7 @@ function App() {
         <nav className="navbar">
           <a href="#inicio" className="navbar-logo" onClick={() => setMenuOpen(false)}>ELBERT JEAN</a>
           <button className="btn-pixel menu-toggle-btn" onClick={() => setMenuOpen(!menuOpen)}>
-            {menuOpen ? 'START' : 'SELECT'}
+            {menuOpen ? 'CLOSE MENU' : 'OPEN MENU'}
           </button>
           <ul className={`nav-links ${menuOpen ? 'open' : ''}`}>
             <li className="nav-item">
@@ -109,55 +109,54 @@ function App() {
             </div>
 
             <div className="pixel-box light">
-              <div className="pixel-box-header">🧠 SOFT SKILLS (ATRIBUTOS)</div>
-              <div className="skills-list">
-                <div className="skill-bar-container">
-                  <div className="skill-name">
-                    <span>Resolução de Problemas</span>
-                    <span>95%</span>
-                  </div>
-                  <div className="pixel-progress-bg">
-                    <div className="pixel-progress-fill" style={{ width: '95%', backgroundColor: 'var(--snes-red)' }}></div>
+              <div className="pixel-box-header">🧠 HABILIDADES PASSIVAS (BUFFS)</div>
+              <div className="passives-list">
+                <div className="passive-item">
+                  <div className="passive-header">
+                    <span className="passive-status status-gray">[⚡ ATIVA]</span>
+                    <span className="passive-title">Adaptabilidade</span>
                   </div>
                 </div>
 
-                <div className="skill-bar-container">
-                  <div className="skill-name">
-                    <span>Código Limpo & Organização</span>
-                    <span>90%</span>
-                  </div>
-                  <div className="pixel-progress-bg">
-                    <div className="pixel-progress-fill" style={{ width: '90%', backgroundColor: 'var(--snes-blue)' }}></div>
+                <div className="passive-item">
+                  <div className="passive-header">
+                    <span className="passive-status status-purple">[⚡ ATIVA]</span>
+                    <span className="passive-title">Aprendizado Rápido</span>
                   </div>
                 </div>
 
-                <div className="skill-bar-container">
-                  <div className="skill-name">
-                    <span>UX / UI & Performance</span>
-                    <span>88%</span>
-                  </div>
-                  <div className="pixel-progress-bg">
-                    <div className="pixel-progress-fill" style={{ width: '88%', backgroundColor: 'var(--snes-green)' }}></div>
+                <div className="passive-item">
+                  <div className="passive-header">
+                    <span className="passive-status status-cyan">[⚡ ATIVA]</span>
+                    <span className="passive-title">Autonomia Plena</span>
                   </div>
                 </div>
 
-                <div className="skill-bar-container">
-                  <div className="skill-name">
-                    <span>Comunicação & Equipe</span>
-                    <span>85%</span>
-                  </div>
-                  <div className="pixel-progress-bg">
-                    <div className="pixel-progress-fill" style={{ width: '85%', backgroundColor: 'var(--snes-yellow)' }}></div>
+                <div className="passive-item">
+                  <div className="passive-header">
+                    <span className="passive-status status-blue">[⚡ ATIVA]</span>
+                    <span className="passive-title">Código Limpo & Organização</span>
                   </div>
                 </div>
 
-                <div className="skill-bar-container">
-                  <div className="skill-name">
-                    <span>Adaptabilidade</span>
-                    <span>92%</span>
+                <div className="passive-item">
+                  <div className="passive-header">
+                    <span className="passive-status status-yellow">[⚡ ATIVA]</span>
+                    <span className="passive-title">Comunicação & Trabalho em Equipe</span>
                   </div>
-                  <div className="pixel-progress-bg">
-                    <div className="pixel-progress-fill" style={{ width: '92%', backgroundColor: 'var(--snes-gray)' }}></div>
+                </div>
+
+                <div className="passive-item">
+                  <div className="passive-header">
+                    <span className="passive-status status-red">[⚡ ATIVA]</span>
+                    <span className="passive-title">Resolução de Problemas</span>
+                  </div>
+                </div>
+
+                <div className="passive-item">
+                  <div className="passive-header">
+                    <span className="passive-status status-green">[⚡ ATIVA]</span>
+                    <span className="passive-title">UX / UI & Performance</span>
                   </div>
                 </div>
               </div>
@@ -460,7 +459,7 @@ function App() {
               </div>
               <div className="btn-submit-container">
                 <button type="submit" className="btn-pixel btn-blue">
-                  GRAVAR SAVE / ENVIAR
+                  ENVIAR MENSAGEM
                 </button>
               </div>
             </form>
@@ -472,9 +471,10 @@ function App() {
       <footer className="footer">
         <div className="footer-logo">GAME OVER</div>
         <div className="footer-socials">
-          <a href="https://linkedin.com/in/elbertjean/" target="_blank" rel="noopener noreferrer" className="social-link">LINKEDIN</a>
+          <a href="mailto:elbertjean.work@gmail.com" className="social-link">EMAIL</a>
           <a href="https://github.com/elbertjean" target="_blank" rel="noopener noreferrer" className="social-link">GITHUB</a>
-          <a href="mailto:elbertjean.work@gmail.com" className="social-link">CONTATO</a>
+          <a href="https://www.instagram.com/elbertjean/" target="_blank" rel="noopener noreferrer" className="social-link">INSTAGRAM</a>
+          <a href="https://linkedin.com/in/elbertjean/" target="_blank" rel="noopener noreferrer" className="social-link">LINKEDIN</a>
         </div>
         <div className="footer-copyright">
           © 2026 ELBERT JEAN. PRESS START TO COOP.
