@@ -83,6 +83,7 @@ function App() {
               Com 29 anos, residente de São José dos Campos/SP e <strong>3 anos de sólida experiência em Front-End</strong>, desenvolvo interfaces de alta performance, dashboards complexos e visualizações de dados interativas orientadas a mapas georreferenciados.
             </p>
             <div className="hero-actions">
+              <a href="/curriculo.pdf" download="Curriculo_Elbert_Jean.pdf" target="_blank" rel="noopener noreferrer" className="btn-pixel btn-yellow">BAIXAR CURRÍCULO 📜</a>
               <a href="#experiencia" className="btn-pixel btn-blue">VER MISSÕES (PORTFÓLIO)</a>
               <a href="#evinil" className="btn-pixel btn-red">BOSS STAGE: EVINIL</a>
             </div>
@@ -445,7 +446,14 @@ function App() {
             <div className="pixel-box-header">💾 SALVAR SEU JOGO</div>
             <p className="contact-desc">
               Entre em contato para iniciarmos uma nova quest ou cooperação técnica!
+              <br /><br />
+              Ou, se preferir, leve meu currículo com você:
             </p>
+            <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '2rem' }}>
+              <a href="/curriculo.pdf" download="Curriculo_Elbert_Jean.pdf" target="_blank" rel="noopener noreferrer" className="btn-pixel btn-yellow">
+                BAIXAR CURRÍCULO 📜
+              </a>
+            </div>
             <form onSubmit={(e) => {
               e.preventDefault();
               const name = e.target.elements.nome.value;
