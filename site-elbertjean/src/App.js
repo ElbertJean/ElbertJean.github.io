@@ -84,6 +84,7 @@ function App() {
             </p>
             <div className="hero-actions">
               <a href="/curriculo.pdf" download="Curriculo_Elbert_Jean.pdf" target="_blank" rel="noopener noreferrer" className="btn-pixel btn-yellow">BAIXAR CURRÍCULO 📜</a>
+              <a href="https://www.linkedin.com/in/elbertjean/" target="_blank" rel="noopener noreferrer" className="btn-pixel btn-blue">ACESSAR LINKEDIN</a>
               <a href="#experiencia" className="btn-pixel btn-blue">VER MISSÕES (PORTFÓLIO)</a>
               <a href="#evinil" className="btn-pixel btn-red">BOSS STAGE: EVINIL</a>
             </div>
@@ -195,6 +196,8 @@ function App() {
                 <span className="skill-badge">PostgreSQL</span>
                 <span className="skill-badge">MySQL</span>
                 <span className="skill-badge">Node.js</span>
+                <span className="skill-badge">Nest.js</span>
+                <span className="skill-badge">TypeORM</span>
                 <span className="skill-badge">Express</span>
                 <span className="skill-badge">Java</span>
                 <span className="skill-badge">Spring Boot</span>

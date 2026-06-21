@@ -188,6 +188,7 @@ h4 {
   transition: all 0.1s ease;
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 0.5rem;
   text-decoration: none;
 }
@@ -306,8 +307,8 @@ section {
 }
 
 .hero-actions {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: 1rem;
 }
 
@@ -1025,5 +1026,36 @@ section {
 
   .passive-title {
     font-size: 0.62rem;
+  }
+}
+
+/* Responsive adjustments for mobile */
+@media (max-width: 768px) {
+  .btn-pixel {
+    font-size: 0.6rem;
+    padding: 0.75rem 1rem;
+    text-align: center;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .evinil-layout {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .evinil-desc {
+    font-size: 0.9rem;
+    text-align: center;
+  }
+
+  .evinil-graphic {
+    transform: scale(0.8);
+  }
+
+  .evinil-tags,
+  .evinil-desc div[style*="flex"] {
+    justify-content: center;
   }
 }
