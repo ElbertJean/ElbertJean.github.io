@@ -77,10 +77,10 @@ function App() {
             <span className="hero-tag">[ PLAYER 1 - READY ]</span>
             <h1 className="hero-name">ELBERT JEAN DOS SANTOS</h1>
             <h2 className="hero-tag" style={{ color: 'var(--snes-yellow)', fontSize: '0.8rem', marginBottom: '1.5rem' }}>
-              DESENVOLVEDOR FRONT-END PLENO
+              DESENVOLVEDOR FRONT-END PLENO & FULLSTACK
             </h2>
             <p className="hero-desc">
-              Com 29 anos, residente de São José dos Campos/SP e <strong>3 anos de sólida experiência em Front-End</strong>, desenvolvo interfaces de alta performance, dashboards complexos e visualizações de dados interativas orientadas a mapas georreferenciados.
+              Com 30 anos, residente de São José dos Campos/SP e <strong>sólida experiência de mais de 3 anos</strong>, construo aplicações completas com foco em <strong>React, TypeScript e ecossistema Node.js</strong>. Especialista em dashboards analíticos, mapas interativos e interfaces de alta performance, atuo desde a modelagem de bancos de dados até a entrega em produção. Idealizador da plataforma SaaS EVinil, unindo visão de produto e código escalável.
             </p>
             <div className="hero-actions">
               <a href="/curriculo.pdf" download="Curriculo_Elbert_Jean.pdf" target="_blank" rel="noopener noreferrer" className="btn-pixel btn-yellow">BAIXAR CURRÍCULO 📜</a>
@@ -100,10 +100,10 @@ function App() {
             <div className="pixel-box rpg-dialog">
               <div className="pixel-box-header">💬 SISTEMA DE DIÁLOGO RPG</div>
               <p>
-                Eu sou o Elbert, desenvolvedor front-end com <strong>3 anos de experiência</strong>, focado em criar aplicações escaláveis e refinadas com <strong>React</strong> e <strong>TypeScript</strong>.
+                Eu sou o Elbert, desenvolvedor front-end pleno com forte atuação fullstack, com <strong>mais de 3 anos de experiência</strong>, focado em criar aplicações escaláveis e de alta performance de ponta a ponta.
               </p>
               <p>
-                Tenho sólida experiência no ecossistema front-end, atuando desde a construção de interfaces e prototipação no Figma até a entrega final de dashboards analíticos, relatórios e mapas interativos (utilizando Leaflet e GeoJSON) com alta performance.
+                Especialista no ecossistema <strong>React</strong>, <strong>TypeScript</strong> e <strong>Node.js</strong>, atuo desde a prototipação e interfaces fluidas até a modelagem de bancos de dados, APIs robustas e entrega em produção de dashboards analíticos, mapas interativos e sistemas SaaS.
               </p>
               <p>
                 Além disso, possuo a mentalidade de dono de produto: fundei o <strong>EVinil</strong>, uma plataforma SaaS fullstack onde gerenciei todo o ciclo de vida do software, unindo decisões técnicas a insights de negócio reais.

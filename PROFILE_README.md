@@ -12,8 +12,8 @@
 <td width="65%" valign="top" style="padding-left: 20px;">
 <code>[ PLAYER 1 - READY ]</code>
 <h1 style="margin-top: 10px; margin-bottom: 10px; border-bottom: none;">ELBERT JEAN DOS SANTOS</h1>
-<h3 style="color: #ffa502; margin-top: 5px; margin-bottom: 15px; font-family: monospace;">DESENVOLVEDOR FRONT-END PLENO // ESPECIALISTA REACT & TS</h3>
-<p style="font-size: 16px; line-height: 1.6;">Com 29 anos, residente de São José dos Campos/SP e <strong>3 anos de sólida experiência em Front-End</strong>, desenvolvo interfaces de alta performance, dashboards complexos e visualizações de dados interativas orientadas a mapas georreferenciados.</p>
+<h3 style="color: #ffa502; margin-top: 5px; margin-bottom: 15px; font-family: monospace;">DESENVOLVEDOR FRONT-END PLENO & FULLSTACK // REACT, TS & NODE</h3>
+<p style="font-size: 16px; line-height: 1.6;">Com 30 anos, residente de São José dos Campos/SP e <strong>sólida experiência de mais de 3 anos</strong>, construo aplicações completas com foco em <strong>React, TypeScript e ecossistema Node.js</strong>. Especialista em dashboards analíticos, mapas interativos e interfaces de alta performance, atuo desde a modelagem de bancos de dados até a entrega em produção. Idealizador da plataforma SaaS EVinil, unindo visão de produto e código escalável.</p>
 <br/>
 <div>
 <a href="https://evinil.com.br" target="_blank">
