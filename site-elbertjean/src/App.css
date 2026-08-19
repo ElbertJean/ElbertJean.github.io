@@ -23,6 +23,11 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  cursor: url('./assets/mario_normal_large.cur'), url('./assets/mario_normal_large.png'), auto;
+}
+
+a, button, input[type="submit"], .btn-pixel, .skill-badge, .inventory-card, [role="button"] {
+  cursor: url('./assets/mario_link_large.cur'), url('./assets/mario_link_large.png'), pointer !important;
 }
 
 html {
@@ -36,6 +41,7 @@ body {
   line-height: 1.6;
   overflow-x: hidden;
   image-rendering: pixelated;
+  cursor: url('./assets/mario_normal_large.cur'), url('./assets/mario_normal_large.png'), auto;
 }
 
 /* CRT Scanlines Overlay */
@@ -133,8 +139,8 @@ h1, h2, h3, h4 {
   border-style: solid;
   border-width: 4px;
   border-color: var(--border-color);
-  border-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="6" height="6"><path d="M0 2h2v2H0zM2 0h2v2H2zM4 2h2v2H4zM2 4h2v2H2z" fill="%23000000"/></svg>') 2 repeat;
-  cursor: pointer;
+  border-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="6" height="6"><path d="M0 2h2v2H0zM2 0h2v2H0zM4 2h2v2H4zM2 4h2v2H2z" fill="%23000000"/></svg>') 2 repeat;
+  cursor: url('./assets/mario_link_large.cur'), url('./assets/mario_link_large.png'), pointer !important;
   outline: none;
   color: #fff;
   background-color: var(--snes-gray);
