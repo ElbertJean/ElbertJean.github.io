@@ -1,0 +1,81 @@
+/* Experience Quest Log Styles */
+.quest-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.quest-item {
+  position: relative;
+}
+
+.quest-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px dashed rgba(255, 255, 255, 0.1);
+  padding-bottom: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.quest-title-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.quest-status {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 0.55rem;
+  padding: 0.25rem 0.5rem;
+  border: 2px solid var(--snes-green);
+  color: var(--snes-green);
+  text-transform: uppercase;
+}
+
+.quest-status.ongoing {
+  border-color: var(--snes-yellow);
+  color: var(--snes-yellow);
+  animation: status-pulse 1.5s infinite alternate;
+}
+
+.quest-title {
+  font-size: 0.9rem;
+  color: var(--text-primary);
+  margin-bottom: 0;
+}
+
+.quest-company {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 0.65rem;
+  color: var(--snes-blue);
+}
+
+.quest-date {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
+.quest-tasks {
+  list-style: square;
+  padding-left: 1.25rem;
+}
+
+.quest-tasks li {
+  margin-bottom: 0.5rem;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+@keyframes status-pulse {
+  0% { opacity: 0.7; }
+  100% { opacity: 1; text-shadow: 0 0 8px var(--snes-yellow); }
+}
+
+@media (max-width: 768px) {
+  .quest-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+}

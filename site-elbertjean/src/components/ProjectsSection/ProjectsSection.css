@@ -1,0 +1,242 @@
+/* Featured Projects (EVinil & RotinaBusiness) Styles */
+.evinil-showcase {
+  background: linear-gradient(180deg, #231942 0%, #17102e 100%);
+  border-color: var(--snes-red);
+}
+
+.evinil-layout {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.evinil-graphic {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.evinil-cartridge {
+  width: 280px;
+  height: 200px;
+  background-color: #57606f;
+  border: 6px solid #000;
+  border-radius: 8px;
+  box-shadow: 0 10px 0 rgba(0, 0, 0, 0.6);
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+}
+
+.evinil-cartridge::before {
+  content: " ";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 180px;
+  height: 20px;
+  background-color: #2f3542;
+  border-bottom: 4px solid #000;
+}
+
+.evinil-label {
+  margin-top: 15px;
+  height: 110px;
+  background: linear-gradient(45deg, #1e1e24 25%, #ff4757 25%, #ff4757 75%, #1e1e24 75%);
+  border: 4px solid #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 1rem;
+  text-shadow: 2px 2px 0px #000;
+  letter-spacing: 0.1em;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.8);
+}
+
+.evinil-vinyl {
+  width: 160px;
+  height: 160px;
+  background-color: #111;
+  border-radius: 50%;
+  border: 6px solid #000;
+  box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.4);
+  position: absolute;
+  right: 10px;
+  bottom: -20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: spin 6s infinite linear;
+}
+
+.vinyl-grooves {
+  width: 120px;
+  height: 120px;
+  border: 2px dashed #333;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.vinyl-label {
+  width: 50px;
+  height: 50px;
+  background-color: var(--snes-red);
+  border-radius: 50%;
+  border: 3px solid #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.vinyl-center {
+  width: 12px;
+  height: 12px;
+  background-color: var(--bg-color);
+  border-radius: 50%;
+  border: 2px solid #000;
+}
+
+.evinil-desc {
+  font-size: 0.95rem;
+}
+
+.evinil-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1.5rem 0;
+}
+
+.evinil-tag {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 0.5rem;
+  padding: 0.4rem 0.6rem;
+  background-color: rgba(0, 0, 0, 0.3);
+  border: 2px solid var(--snes-blue);
+  color: var(--snes-blue);
+}
+
+/* ROTINABUSINESS FEATURED (BOSS STAGE 2) */
+.rotina-showcase {
+  background: linear-gradient(180deg, #0f2027 0%, #1a365d 50%, #0f172a 100%);
+  border-color: #00d2d3;
+}
+
+.rotina-layout {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.rotina-graphic {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.rotina-cartridge {
+  width: 280px;
+  height: 200px;
+  background-color: #34495e;
+  border: 6px solid #000;
+  border-radius: 8px;
+  box-shadow: 0 10px 0 rgba(0, 0, 0, 0.6);
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+}
+
+.rotina-cartridge::before {
+  content: " ";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 180px;
+  height: 20px;
+  background-color: #1e293b;
+  border-bottom: 4px solid #000;
+}
+
+.rotina-label {
+  margin-top: 15px;
+  height: 110px;
+  background: linear-gradient(45deg, #0f172a 25%, #0984e3 25%, #0984e3 75%, #0f172a 75%);
+  border: 4px solid #000;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 5px;
+  color: #fff;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 0.75rem;
+  text-shadow: 2px 2px 0px #000;
+  letter-spacing: 0.05em;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.8);
+}
+
+.rotina-badge-icon {
+  width: 140px;
+  height: 140px;
+  background-color: #0984e3;
+  border-radius: 12px;
+  border: 5px solid #000;
+  box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.5);
+  position: absolute;
+  right: 10px;
+  bottom: -20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 2.2rem;
+  text-shadow: 3px 3px 0px #000;
+}
+
+.rotina-desc {
+  font-size: 0.95rem;
+}
+
+.rotina-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1.5rem 0;
+}
+
+.rotina-tag {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 0.5rem;
+  padding: 0.4rem 0.6rem;
+  background-color: rgba(0, 0, 0, 0.3);
+  border: 2px solid #00d2d3;
+  color: #00d2d3;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@media (max-width: 900px) {
+  .evinil-layout, .rotina-layout {
+    grid-template-columns: 1fr;
+  }
+}

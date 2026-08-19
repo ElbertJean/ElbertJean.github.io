@@ -1,0 +1,32 @@
+/* Hobbies / Inventory System Styles */
+.hobbies-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.inventory-card {
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.inventory-card:hover {
+  transform: translateY(-5px);
+}
+
+.inventory-icon {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.inventory-card h3 {
+  font-size: 0.8rem;
+  color: var(--snes-yellow);
+  margin-bottom: 0.75rem;
+}
+
+.inventory-card p {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}

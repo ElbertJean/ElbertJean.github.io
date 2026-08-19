@@ -1,0 +1,43 @@
+/* Contact / Save Game Styles */
+.contact-container {
+  max-width: 800px;
+}
+
+.contact-desc {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 0.95rem;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 0.6rem;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.input-pixel {
+  width: 100%;
+  padding: 0.85rem 1rem;
+  background-color: #000;
+  border: 3px solid var(--text-primary);
+  color: #fff;
+  font-family: 'Space Mono', monospace;
+  font-size: 0.9rem;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.input-pixel:focus {
+  border-color: var(--snes-yellow);
+}
+
+.btn-submit-container {
+  display: flex;
+  justify-content: flex-end;
+}

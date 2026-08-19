@@ -1,0 +1,52 @@
+/* Achievements / Formação Section Styles */
+.achievements-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.achievement-card {
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+}
+
+.achievement-icon {
+  width: 64px;
+  height: 64px;
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid var(--snes-yellow);
+  box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.5);
+  flex-shrink: 0;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 1.5rem;
+  color: var(--snes-yellow);
+}
+
+.achievement-details h3 {
+  font-size: 0.8rem;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.achievement-details .institution {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 0.55rem;
+  color: var(--snes-blue);
+  margin-bottom: 0.5rem;
+}
+
+.achievement-details .year {
+  font-size: 0.8rem;
+  color: var(--snes-yellow);
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .achievements-grid {
+    grid-template-columns: 1fr;
+  }
+}

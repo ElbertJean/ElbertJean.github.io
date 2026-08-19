@@ -1,0 +1,107 @@
+/* Hero Section Styles */
+.hero-wrapper {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 3.5rem;
+  align-items: center;
+  padding-top: 8.5rem; /* Generoso espacamento abaixo do header fixo */
+}
+
+.hero-avatar-container {
+  display: flex;
+  justify-content: center;
+}
+
+.hero-avatar-frame {
+  width: 290px;
+  height: 380px;
+  background-color: var(--bg-card);
+  border: 5px solid #ffffff;
+  box-shadow: 10px 10px 0px #000000;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: float 4s ease-in-out infinite;
+  transition: all 0.3s ease;
+}
+
+.hero-avatar-frame:hover {
+  border-color: var(--snes-yellow);
+  box-shadow: 14px 14px 0px #000000, 0 0 18px var(--snes-yellow);
+}
+
+.hero-avatar {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  image-rendering: pixelated;
+}
+
+.hero-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-tag {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 0.65rem;
+  color: var(--snes-blue);
+  margin-bottom: 0.75rem;
+  text-shadow: 1px 1px 0px #000;
+}
+
+.hero-name {
+  font-size: 2.2rem;
+  line-height: 1.2;
+  color: var(--text-primary);
+  text-shadow: 4px 4px 0px #000;
+  margin-bottom: 1.5rem;
+}
+
+.hero-desc {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  margin-bottom: 2rem;
+}
+
+.hero-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.btn-full-width {
+  grid-column: 1 / -1;
+  width: 100%;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@media (max-width: 900px) {
+  .hero-wrapper {
+    grid-template-columns: 1fr;
+    text-align: center;
+    padding-top: 7rem;
+  }
+
+  .hero-avatar-frame {
+    width: 250px;
+    height: 330px;
+  }
+
+  .hero-actions {
+    grid-template-columns: 1fr;
+  }
+}

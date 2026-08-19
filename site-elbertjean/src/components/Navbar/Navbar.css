@@ -1,0 +1,84 @@
+/* Navbar Component Styles */
+.navbar-container {
+  position: fixed;
+  top: 1rem;
+  left: 3%;
+  right: 3%;
+  z-index: 1000;
+  backdrop-filter: blur(8px);
+  background-color: rgba(28, 21, 53, 0.85);
+  transition: all 0.3s ease;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 1.5rem;
+}
+
+.navbar-logo {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 0.8rem;
+  color: var(--snes-red);
+  text-decoration: none;
+  text-shadow: 2px 2px 0px #000;
+  animation: logo-glow 2s infinite ease-in-out;
+  white-space: nowrap;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 0.85rem;
+  align-items: center;
+}
+
+.nav-item a {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 0.58rem;
+  color: var(--text-primary);
+  text-decoration: none;
+  padding: 0.4rem 0.3rem;
+  transition: all 0.2s ease;
+  display: block;
+  white-space: nowrap;
+}
+
+.nav-item a:hover,
+.nav-item a.active {
+  color: var(--snes-yellow);
+  transform: translateY(-2px);
+}
+
+.menu-toggle-btn {
+  display: none !important;
+}
+
+@keyframes logo-glow {
+  0%, 100% { text-shadow: 2px 2px 0px #000, 0 0 5px var(--snes-red); }
+  50% { text-shadow: 2px 2px 0px #000, 0 0 15px var(--snes-yellow); }
+}
+
+@media (max-width: 1024px) {
+  .menu-toggle-btn {
+    display: inline-flex !important;
+  }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: var(--bg-card);
+    flex-direction: column;
+    padding: 1rem;
+    border-top: 4px solid #000;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+}
