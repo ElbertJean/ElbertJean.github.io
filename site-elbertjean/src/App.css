@@ -26,7 +26,13 @@
   cursor: url('./assets/mario_normal_large.cur'), url('./assets/mario_normal_large.png'), auto;
 }
 
-a, button, input[type="submit"], .btn-pixel, .skill-badge, .inventory-card, [role="button"] {
+a,
+button,
+input[type="submit"],
+.btn-pixel,
+.skill-badge,
+.inventory-card,
+[role="button"] {
   cursor: url('./assets/mario_link_large.cur'), url('./assets/mario_link_large.png'), pointer !important;
 }
 
@@ -77,13 +83,17 @@ section {
   .container {
     padding: 3rem 1rem;
   }
+
   section {
     padding: 2.5rem 0;
   }
 }
 
 /* Titles */
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
   font-family: 'Press Start 2P', cursive;
   text-transform: uppercase;
   letter-spacing: -0.05em;
@@ -127,10 +137,12 @@ h1, h2, h3, h4 {
     margin-bottom: 2rem;
     text-align: center;
   }
+
   .section-title::after,
   .section-title::before {
     content: "==";
   }
+
   .section-title .title-subtitle {
     display: block;
     width: 100%;
@@ -171,6 +183,7 @@ h1, h2, h3, h4 {
   .pixel-box {
     padding: 1rem;
   }
+
   .pixel-box-header {
     font-size: 0.8rem;
     margin-bottom: 1rem;
@@ -200,11 +213,6 @@ h1, h2, h3, h4 {
   text-decoration: none;
 }
 
-.btn-pixel:not(.menu-toggle-btn):active {
-  transform: translateY(4px);
-  box-shadow: none;
-}
-
 @media (max-width: 768px) {
   .btn-pixel {
     font-size: 0.62rem;
@@ -212,14 +220,45 @@ h1, h2, h3, h4 {
   }
 }
 
-.btn-red { background-color: var(--snes-red); }
-.btn-yellow { background-color: var(--snes-yellow); color: #000; }
-.btn-blue { background-color: var(--snes-blue); }
-.btn-green { background-color: var(--snes-green); color: #000; }
-.btn-purple { background-color: #6c5ce7; color: #fff; }
+.btn-red {
+  background-color: var(--snes-red);
+}
 
-.btn-red:hover { background-color: #ff6b81; }
-.btn-yellow:hover { background-color: #eccc68; }
-.btn-blue:hover { background-color: #70a1ff; }
-.btn-green:hover { background-color: #7bed9f; }
-.btn-purple:hover { background-color: #a29bfe; }
+.btn-yellow {
+  background-color: var(--snes-yellow);
+  color: #000;
+}
+
+.btn-blue {
+  background-color: var(--snes-blue);
+}
+
+.btn-green {
+  background-color: var(--snes-green);
+  color: #000;
+}
+
+.btn-purple {
+  background-color: #6c5ce7;
+  color: #fff;
+}
+
+.btn-red:hover {
+  background-color: #ff6b81;
+}
+
+.btn-yellow:hover {
+  background-color: #eccc68;
+}
+
+.btn-blue:hover {
+  background-color: #70a1ff;
+}
+
+.btn-green:hover {
+  background-color: #7bed9f;
+}
+
+.btn-purple:hover {
+  background-color: #a29bfe;
+}
