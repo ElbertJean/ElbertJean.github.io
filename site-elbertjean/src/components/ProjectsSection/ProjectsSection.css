@@ -238,5 +238,100 @@
 @media (max-width: 900px) {
   .evinil-layout, .rotina-layout {
     grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .evinil-desc h3, .rotina-desc h3 {
+    font-size: clamp(0.75rem, 4.5vw, 1.2rem) !important;
+    word-break: break-word;
+    overflow-wrap: break-word;
+  }
+}
+
+@media (max-width: 600px) {
+  .evinil-graphic, .rotina-graphic {
+    padding-right: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .evinil-cartridge, .rotina-cartridge {
+    width: 220px;
+    height: 160px;
+    padding: 8px;
+  }
+
+  .evinil-cartridge::before, .rotina-cartridge::before {
+    width: 130px;
+    height: 15px;
+  }
+
+  .evinil-label {
+    margin-top: 10px;
+    height: 90px;
+    font-size: 0.8rem;
+  }
+
+  .rotina-label {
+    margin-top: 10px;
+    height: 90px;
+    font-size: 0.6rem;
+  }
+
+  .evinil-vinyl {
+    width: 110px;
+    height: 110px;
+    right: -10px;
+    bottom: -15px;
+  }
+
+  .vinyl-grooves {
+    width: 80px;
+    height: 80px;
+  }
+
+  .vinyl-label {
+    width: 35px;
+    height: 35px;
+  }
+
+  .rotina-badge-icon {
+    width: 90px;
+    height: 90px;
+    font-size: 1.4rem;
+    right: -10px;
+    bottom: -15px;
+  }
+
+  .rotina-badge-icon span:last-child {
+    font-size: 0.35rem !important;
+    margin-top: 0.25rem !important;
+  }
+
+  .evinil-tag, .rotina-tag {
+    font-size: 0.45rem;
+    padding: 0.3rem 0.5rem;
+  }
+}
+
+.project-buttons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 1.5rem;
+}
+
+.project-buttons .btn-pixel {
+  white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+  .project-buttons {
+    flex-direction: column;
+    gap: 0.75rem;
+    width: 100%;
+  }
+
+  .project-buttons .btn-pixel {
+    width: 100%;
   }
 }

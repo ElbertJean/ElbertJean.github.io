@@ -6,7 +6,10 @@ const ExperiencesSection: React.FC = () => {
   return (
     <section id="experiencia">
       <div className="container">
-        <h2 className="section-title">QUEST LOG (MISSÕES COMPLETAS)</h2>
+        <h2 className="section-title">
+          <span>QUEST LOG</span>
+          <span className="title-subtitle">(MISSÕES COMPLETAS)</span>
+        </h2>
         <div className="quest-timeline">
           {experiencesData.map((exp) => (
             <div key={exp.id} className={`pixel-box quest-item ${exp.isLight ? 'light' : ''}`}>

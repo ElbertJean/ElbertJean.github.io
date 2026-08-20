@@ -73,6 +73,15 @@ section {
   border-bottom: 4px dashed var(--bg-card-light);
 }
 
+@media (max-width: 768px) {
+  .container {
+    padding: 3rem 1rem;
+  }
+  section {
+    padding: 2.5rem 0;
+  }
+}
+
 /* Titles */
 h1, h2, h3, h4 {
   font-family: 'Press Start 2P', cursive;
@@ -82,15 +91,17 @@ h1, h2, h3, h4 {
 }
 
 .section-title {
-  font-size: clamp(1rem, 4vw, 1.5rem);
+  font-size: clamp(0.85rem, 4vw, 1.5rem);
   color: var(--snes-green);
   margin-bottom: 3rem;
   text-shadow: 3px 3px 0px #000;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 1rem;
-  white-space: nowrap;
+  gap: 0.75rem;
+  text-align: center;
+  flex-wrap: wrap;
+  word-break: break-word;
 }
 
 .section-title::after {
@@ -101,6 +112,31 @@ h1, h2, h3, h4 {
 .section-title::before {
   content: "====";
   color: var(--snes-blue);
+}
+
+.section-title .title-subtitle {
+  font-size: 0.85em;
+  margin-left: 0.5rem;
+}
+
+@media (max-width: 600px) {
+  .section-title {
+    flex-direction: column;
+    gap: 0.4rem;
+    font-size: clamp(0.75rem, 3.8vw, 1.1rem);
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+  .section-title::after,
+  .section-title::before {
+    content: "==";
+  }
+  .section-title .title-subtitle {
+    display: block;
+    width: 100%;
+    margin-left: 0;
+    margin-top: 0.2rem;
+  }
 }
 
 /* Pixel Box (NES/SNES Styled) */
@@ -131,6 +167,16 @@ h1, h2, h3, h4 {
   gap: 0.5rem;
 }
 
+@media (max-width: 768px) {
+  .pixel-box {
+    padding: 1rem;
+  }
+  .pixel-box-header {
+    font-size: 0.8rem;
+    margin-bottom: 1rem;
+  }
+}
+
 /* Buttons (SNES Controller Style) */
 .btn-pixel {
   font-family: 'Press Start 2P', cursive;
@@ -157,6 +203,13 @@ h1, h2, h3, h4 {
 .btn-pixel:active {
   transform: translateY(4px);
   box-shadow: none;
+}
+
+@media (max-width: 768px) {
+  .btn-pixel {
+    font-size: 0.62rem;
+    padding: 0.65rem 1rem;
+  }
 }
 
 .btn-red { background-color: var(--snes-red); }

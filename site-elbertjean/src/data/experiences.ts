@@ -21,12 +21,13 @@ export const experiencesData: ExperienceItem[] = [
     title: "Técnico de TI (Autônomo)",
     company: "EJ Informática",
     date: "Nov 2021 - Atualmente",
-    status: "COMPLETA",
-    statusClass: "",
+    status: "ATUAÇÃO SOB DEMANDA",
+    statusClass: "on-demand",
     isLight: true,
     tasks: [
-      "Atuação autônoma em manutenção preventiva e corretiva de hardware e sistemas operacionais, desenvolvendo forte capacidade de diagnóstico e resolução de problemas.",
-      "Gestão direta de clientes, traduzindo problemas técnicos complexos em soluções práticas e prestando consultoria em TI."
+      "Prestação de serviços autônomos de suporte técnico, realizando diagnóstico e manutenção preventiva e corretiva de computadores e notebooks, com identificação de falhas em hardware e software.",
+
+      "Montagem e configuração de computadores, upgrades e substituição de componentes, formatação e instalação de sistemas operacionais, limpeza e otimização de equipamentos, além de configuração de softwares e suporte direto ao cliente."
     ]
   },
   {

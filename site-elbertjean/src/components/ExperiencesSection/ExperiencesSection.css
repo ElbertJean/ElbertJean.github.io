@@ -39,6 +39,12 @@
   animation: status-pulse 1.5s infinite alternate;
 }
 
+.quest-status.on-demand {
+  border-color: var(--snes-cyan);
+  color: var(--snes-cyan);
+  background-color: rgba(0, 206, 201, 0.1);
+}
+
 .quest-title {
   font-size: 0.9rem;
   color: var(--text-primary);
@@ -73,9 +79,30 @@
 }
 
 @media (max-width: 768px) {
+  .quest-timeline {
+    gap: 1.75rem;
+  }
+
   .quest-header {
     flex-direction: column;
     align-items: flex-start;
     gap: 0.5rem;
+  }
+
+  .quest-title-container {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .quest-title {
+    font-size: 0.82rem;
+  }
+
+  .quest-company {
+    font-size: 0.58rem;
+  }
+
+  .quest-tasks li {
+    font-size: 0.85rem;
   }
 }

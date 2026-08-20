@@ -55,7 +55,7 @@ const ProjectsSection: React.FC = () => {
                     </span>
                   ))}
                 </div>
-                <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', marginTop: '1.5rem' }}>
+                <div className="project-buttons">
                   {project.buttons.map((btn, idx) => (
                     <a key={idx} href={btn.url} target="_blank" rel="noopener noreferrer" className={`btn-pixel ${btn.btnClass}`}>
                       {btn.label}

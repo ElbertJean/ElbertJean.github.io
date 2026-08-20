@@ -64,5 +64,27 @@
 @media (max-width: 900px) {
   .about-grid {
     grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .rpg-dialog {
+    font-size: 0.88rem;
+    line-height: 1.6;
+  }
+
+  .passive-header {
+    flex-wrap: wrap;
+    gap: 0.4rem;
+  }
+
+  .passive-status {
+    font-size: 0.55rem;
+    padding: 0.25rem 0.4rem;
+  }
+
+  .passive-title {
+    font-size: 0.65rem;
   }
 }

@@ -38,3 +38,25 @@
   font-size: 0.75rem;
   color: var(--text-secondary);
 }
+
+@media (max-width: 600px) {
+  .footer {
+    padding: 2rem 1rem;
+  }
+
+  .footer-logo {
+    font-size: 1.1rem;
+  }
+
+  .footer-socials {
+    gap: 1rem;
+  }
+
+  .social-link {
+    font-size: 0.58rem;
+  }
+
+  .footer-copyright {
+    font-size: 0.7rem;
+  }
+}

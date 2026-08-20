@@ -37,7 +37,74 @@
   border-color: var(--snes-yellow);
 }
 
+.contact-buttons {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-bottom: 2rem;
+  width: 100%;
+}
+
+.contact-buttons .btn-pixel {
+  width: 100%;
+  font-size: 0.58rem;
+  padding: 0.85rem 0.4rem;
+  white-space: nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.pixel-divider {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 2.25rem 0 1.75rem 0;
+  color: var(--snes-yellow);
+  font-family: 'Press Start 2P', cursive;
+  font-size: 0.58rem;
+  line-height: 1.4;
+}
+
+.pixel-divider::before,
+.pixel-divider::after {
+  content: '';
+  flex: 1;
+  border-bottom: 2px dashed rgba(255, 255, 255, 0.2);
+}
+
+.pixel-divider span {
+  padding: 0 0.75rem;
+  color: var(--snes-yellow);
+  text-shadow: 1px 1px 0px #000;
+}
+
 .btn-submit-container {
   display: flex;
   justify-content: flex-end;
+}
+
+@media (max-width: 850px) {
+  .contact-buttons {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+
+  .contact-buttons .btn-pixel {
+    font-size: 0.65rem;
+    padding: 0.85rem 1rem;
+    white-space: nowrap;
+  }
+
+  .contact-desc {
+    font-size: 0.88rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .btn-submit-container {
+    justify-content: center;
+  }
+
+  .btn-submit-container .btn-pixel {
+    width: 100%;
+  }
 }
