@@ -200,7 +200,7 @@ h1, h2, h3, h4 {
   text-decoration: none;
 }
 
-.btn-pixel:active {
+.btn-pixel:not(.menu-toggle-btn):active {
   transform: translateY(4px);
   box-shadow: none;
 }
