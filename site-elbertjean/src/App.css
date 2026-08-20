@@ -41,6 +41,9 @@ input[type="submit"],
 
 html {
   scroll-behavior: smooth;
+  max-width: 100vw;
+  width: 100%;
+  overflow-x: hidden;
 }
 
 body {
@@ -49,8 +52,17 @@ body {
   color: var(--text-primary);
   line-height: 1.6;
   overflow-x: hidden;
+  max-width: 100vw;
   width: 100%;
+  position: relative;
   cursor: url('./assets/mario_normal_large.cur'), url('./assets/mario_normal_large.png'), auto;
+}
+
+.App {
+  max-width: 100vw;
+  width: 100%;
+  overflow-x: hidden;
+  position: relative;
 }
 
 /* CRT Scanlines Overlay */
