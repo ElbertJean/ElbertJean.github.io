@@ -5,7 +5,7 @@ import './Navbar.css';
 
 const Navbar: React.FC<NavbarProps> = ({ activeSection, menuOpen, setMenuOpen }) => {
   return (
-    <div className={`navbar-container pixel-box ${menuOpen ? 'menu-open' : ''}`}>
+    <div className={`navbar-container ${menuOpen ? 'menu-open' : ''}`}>
       <nav className="navbar">
         <a href="#inicio" className="navbar-logo" onClick={() => setMenuOpen(false)}>
           ELBERT JEAN

@@ -1,28 +1,24 @@
 /* Navbar Component Styles */
 .navbar-container {
   position: fixed;
-  top: 0;
+  top: -15px;
   left: 0;
   right: 0;
   width: 100%;
+  padding-top: 15px;
   z-index: 1000;
-  backdrop-filter: blur(10px);
-  background-color: rgba(28, 21, 53, 0.95);
+  background-color: #1c1535;
   border-bottom: 4px solid #000;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
-  border-left: none !important;
-  border-right: none !important;
-  border-top: none !important;
-  border-radius: 0 !important;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
 
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1200px;
   margin: 0 auto;
-  padding: 0.75rem 1.5rem;
+  padding: 3rem 3rem;
+  height: 56px;
 }
 
 .navbar-logo {
@@ -31,7 +27,6 @@
   color: var(--snes-red);
   text-decoration: none;
   text-shadow: 2px 2px 0px #000;
-  animation: logo-glow 2s infinite ease-in-out;
   white-space: nowrap;
 }
 
@@ -48,7 +43,6 @@
   color: var(--text-primary);
   text-decoration: none;
   padding: 0.4rem 0.3rem;
-  transition: color 0.2s ease;
   display: block;
   white-space: nowrap;
 }
@@ -62,46 +56,41 @@
   display: none !important;
 }
 
-@keyframes logo-glow {
-  0%, 100% { text-shadow: 2px 2px 0px #000, 0 0 5px var(--snes-red); }
-  50% { text-shadow: 2px 2px 0px #000, 0 0 15px var(--snes-yellow); }
-}
-
 @media (max-width: 1024px) {
-  .navbar-container {
-    top: 0;
-    left: 0;
-    right: 0;
-    width: 100%;
-  }
-
   .navbar {
-    padding: 0.5rem 0.75rem;
+    height: 80px;
+    padding: 0 1.5rem;
     gap: 0.5rem;
   }
 
   .navbar-logo {
-    font-size: clamp(0.65rem, 3.2vw, 0.8rem);
-    flex-shrink: 1;
-    min-width: 0;
+    font-size: clamp(0.72rem, 3.8vw, 0.85rem);
+    flex-shrink: 0;
   }
 
   .menu-toggle-btn {
     display: inline-flex !important;
-    font-size: 0.55rem !important;
-    padding: 0.45rem 0.4rem !important;
-    width: 115px !important;
-    min-width: 115px !important;
-    max-width: 115px !important;
+    font-size: 0.58rem !important;
+    height: 38px !important;
+    width: 120px !important;
+    min-width: 120px !important;
+    max-width: 120px !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    align-items: center !important;
     justify-content: center !important;
     text-align: center !important;
-    flex-shrink: 0;
+    flex-shrink: 0 !important;
     transform: none !important;
     transition: none !important;
+    box-shadow: 0 3px 0 #000 !important;
   }
 
-  .menu-toggle-btn:active {
+  .menu-toggle-btn:active,
+  .menu-toggle-btn:focus,
+  .menu-toggle-btn:hover {
     transform: none !important;
+    box-shadow: 0 3px 0 #000 !important;
   }
 
   .nav-links {
@@ -110,11 +99,12 @@
     top: 100%;
     left: 0;
     right: 0;
-    background-color: var(--bg-card);
+    background-color: #1c1535;
     flex-direction: column;
     padding: 0.75rem 0.5rem;
+    border-top: 4px solid #000;
     border-bottom: 4px solid #000;
-    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.7);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.85);
     max-height: 75vh;
     overflow-y: auto;
   }
@@ -125,7 +115,7 @@
 
   .nav-item a {
     font-size: 0.65rem;
-    padding: 0.5rem;
+    padding: 0.6rem;
     text-align: center;
   }
 }
