@@ -26,8 +26,11 @@ const Hero: React.FC = () => {
             <a href="https://github.com/ElbertJean" target="_blank" rel="noopener noreferrer" className="btn-pixel btn-purple">
               MEU GITHUB 🐙
             </a>
-            <a href="https://www.linkedin.com/in/elbertjean/" target="_blank" rel="noopener noreferrer" className="btn-pixel btn-blue btn-full-width">
+            <a href="https://www.linkedin.com/in/elbertjean/" target="_blank" rel="noopener noreferrer" className="btn-pixel btn-blue">
               ACESSAR LINKEDIN 💼
+            </a>
+            <a href="https://canva.link/bg0wrzz5s5gc4gb" target="_blank" rel="noopener noreferrer" className="btn-pixel btn-cyan">
+              APRESENTAÇÃO CANVA 🎨
             </a>
             <a href="#evinil" className="btn-pixel btn-red">
               BOSS STAGE 1: EVINIL

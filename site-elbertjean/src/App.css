@@ -257,6 +257,11 @@ h4 {
   color: #fff;
 }
 
+.btn-cyan {
+  background-color: var(--snes-cyan);
+  color: #000;
+}
+
 .btn-red:hover {
   background-color: #ff6b81;
 }
@@ -275,4 +280,8 @@ h4 {
 
 .btn-purple:hover {
   background-color: #a29bfe;
+}
+
+.btn-cyan:hover {
+  background-color: #81ecec;
 }
