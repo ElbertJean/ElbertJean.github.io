@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './App.css';
 
 import Navbar from './components/Navbar';
+import MobileNavbar from './components/MobileNavbar';
 import Hero from './components/Hero';
 import AboutSection from './components/AboutSection';
 import SkillsSection from './components/SkillsSection';
@@ -51,6 +52,7 @@ const App: React.FC = () => {
   return (
     <div className="App">
       <Navbar activeSection={activeSection} menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
+      <MobileNavbar activeSection={activeSection} menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
       <Hero />
       <AboutSection />
       <SkillsSection />
