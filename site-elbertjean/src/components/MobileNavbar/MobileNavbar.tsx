@@ -7,14 +7,6 @@ const MobileNavbar: React.FC<NavbarProps> = ({ activeSection, menuOpen, setMenuO
   return (
     <header className="mobile-header">
       <div className="mobile-header-bar">
-        <a 
-          href="#inicio" 
-          className="mobile-header-logo" 
-          onClick={() => setMenuOpen(false)}
-        >
-          ELBERT JEAN
-        </a>
-
         <button
           type="button"
           className="mobile-header-btn"
