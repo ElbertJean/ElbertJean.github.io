@@ -8,6 +8,7 @@ export const navLinksData: NavLinkItem[] = [
   { id: "experiencia", label: "MISSÕES" },
   { id: "evinil", label: "EVINIL" },
   { id: "rotinabusiness", label: "ROTINA" },
+  { id: "academicos", label: "APIs FATEC" },
   { id: "hobbies", label: "HOBBIES" },
   { id: "contato", label: "SALVAR" }
 ];

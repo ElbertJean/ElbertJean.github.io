@@ -8,6 +8,7 @@ import SkillsSection from './components/SkillsSection';
 import AchievementsSection from './components/AchievementsSection';
 import ExperiencesSection from './components/ExperiencesSection';
 import ProjectsSection from './components/ProjectsSection';
+import AcademicProjectsSection from './components/AcademicProjectsSection';
 import HobbiesSection from './components/HobbiesSection';
 import ContactSection from './components/ContactSection';
 import Footer from './components/Footer';
@@ -26,6 +27,7 @@ const App: React.FC = () => {
         'experiencia',
         'evinil',
         'rotinabusiness',
+        'academicos',
         'hobbies',
         'contato'
       ];
@@ -57,11 +59,13 @@ const App: React.FC = () => {
       <AchievementsSection />
       <ExperiencesSection />
       <ProjectsSection />
+      <AcademicProjectsSection />
       <HobbiesSection />
       <ContactSection />
       <Footer />
     </div>
   );
 };
+
 
 export default App;

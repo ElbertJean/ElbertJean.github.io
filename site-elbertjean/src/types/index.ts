@@ -80,3 +80,27 @@ export interface NavbarProps {
   menuOpen: boolean;
   setMenuOpen: (open: boolean) => void;
 }
+
+export interface HardSkillItem {
+  skill: string;
+  level: string;
+}
+
+export interface AcademicProject {
+  id: string;
+  semester: string;
+  period: string;
+  partner: string;
+  partnerUrl?: string;
+  title: string;
+  problem: string;
+  myRole: string;
+  fullContributions?: string[];
+  hardSkills?: HardSkillItem[];
+  softSkillsText?: string;
+  technologies: string[];
+  repoUrl: string;
+  badgeColor?: string;
+}
+
+

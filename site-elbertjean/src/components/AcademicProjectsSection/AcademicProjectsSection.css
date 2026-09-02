@@ -1,0 +1,572 @@
+/* Academic Projects Section Styles */
+.academic-showcase {
+  background: linear-gradient(180deg, #10192e 0%, #0a0f1d 100%);
+  border-top: 4px solid #00d2d3;
+  border-bottom: 4px solid #00d2d3;
+  padding: 4rem 0;
+  position: relative;
+}
+
+.academic-header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.academic-subtitle {
+  color: #a4b0be;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 0.65rem;
+  line-height: 1.6;
+  margin-top: 0.8rem;
+  text-transform: uppercase;
+}
+
+/* Semester Selector Tabs */
+.semester-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-bottom: 2.5rem;
+}
+
+.semester-tab {
+  background-color: #1e272e;
+  color: #ced6e0;
+  border: 3px solid #000;
+  padding: 0.65rem 1.2rem;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 0.6rem;
+  cursor: pointer;
+  box-shadow: 3px 3px 0px #000;
+  transition: all 0.2s ease;
+}
+
+.semester-tab:hover {
+  background-color: #2f3542;
+  transform: translateY(-2px);
+  box-shadow: 5px 5px 0px #000;
+}
+
+.semester-tab.active {
+  background-color: #00d2d3;
+  color: #000;
+  border-color: #000;
+  box-shadow: 3px 3px 0px #fff, 5px 5px 0px #000;
+}
+
+/* Grid Layout for Cards (View Mode: ALL) */
+.academic-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+/* Academic Card */
+.academic-card {
+  background: #182232;
+  border: 4px solid #000;
+  box-shadow: 6px 6px 0px #000;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.academic-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 8px 8px 0px #000;
+}
+
+.academic-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 2px dashed #2f3542;
+}
+
+.academic-badge {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 0.55rem;
+  padding: 0.4rem 0.6rem;
+  border: 2px solid #000;
+  color: #fff;
+  box-shadow: 2px 2px 0px #000;
+  text-shadow: 1px 1px 0px #000;
+}
+
+.academic-period {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 0.5rem;
+  color: #747d8c;
+}
+
+.academic-partner {
+  font-size: 0.95rem;
+  color: #2ed573;
+  font-weight: bold;
+  margin-bottom: 0.8rem;
+  line-height: 1.4;
+  min-height: 2.3rem;
+  display: block;
+}
+
+.academic-partner a {
+  color: #2ed573;
+  text-decoration: none;
+}
+
+.academic-partner a:hover {
+  text-decoration: underline;
+}
+
+.academic-title {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 0.8rem;
+  color: #fff;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+  min-height: 4.5rem;
+  display: flex;
+  align-items: flex-start;
+}
+
+.academic-section-block {
+  margin-bottom: 2rem;
+}
+
+.academic-problem-block {
+  min-height: 12.5rem;
+}
+
+.academic-role-block {
+  min-height: 8rem;
+}
+
+.academic-block-label {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 0.55rem;
+  color: #ff7979;
+  margin-bottom: 0.4rem;
+  display: block;
+}
+
+.academic-text {
+  font-size: 0.95rem;
+  color: #dcdde1;
+  line-height: 1.65;
+}
+
+
+.academic-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin: 1.2rem 0;
+  min-height: 6rem;
+  align-content: flex-start;
+}
+
+
+.academic-tag {
+  background: #222f3e;
+  color: #70a1ff;
+  border: 1.5px solid #000;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 0.45rem;
+  padding: 0.3rem 0.5rem;
+  box-shadow: 1px 1px 0px #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex: 1;
+  box-sizing: border-box;
+}
+
+.academic-footer {
+  margin-top: auto;
+  padding-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.btn-academic-detail {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 0.7rem;
+  background-color: #f39c12;
+  color: #000;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 0.55rem;
+  border: 3px solid #000;
+  box-shadow: 3px 3px 0px #000;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  text-align: center;
+}
+
+.btn-academic-detail:hover {
+  background-color: #f1c40f;
+  transform: translate(-2px, -2px);
+  box-shadow: 5px 5px 0px #000;
+}
+
+.btn-academic-repo {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 0.7rem;
+  background-color: #00d2d3;
+  color: #000;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 0.55rem;
+  text-decoration: none;
+  border: 3px solid #000;
+  box-shadow: 3px 3px 0px #000;
+  transition: all 0.15s ease;
+  cursor: pointer;
+  text-align: center;
+}
+
+.btn-academic-repo:hover {
+  background-color: #54a0ff;
+  color: #fff;
+  transform: translate(-2px, -2px);
+  box-shadow: 5px 5px 0px #000;
+}
+
+/* ===================================================
+   DOSSIÊ COMPLETO (FULL SEMESTER VIEW MODE)
+   =================================================== */
+.dossier-container {
+  max-width: 960px;
+  margin: 0 auto;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.dossier-card {
+  background: #141e2e;
+  border: 4px solid #000;
+  box-shadow: 8px 8px 0px #000;
+  padding: 2.5rem;
+  position: relative;
+}
+
+.dossier-top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 3px dashed #2f3542;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.btn-back-grid {
+  background-color: #34495e;
+  color: #fff;
+  border: 2px solid #000;
+  padding: 0.5rem 1rem;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 0.55rem;
+  cursor: pointer;
+  box-shadow: 3px 3px 0px #000;
+  transition: all 0.2s ease;
+}
+
+.btn-back-grid:hover {
+  background-color: #2c3e50;
+  transform: translateY(-2px);
+  box-shadow: 4px 4px 0px #000;
+}
+
+.dossier-title-main {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 1.1rem;
+  color: #fff;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  text-shadow: 2px 2px 0px #000;
+}
+
+.dossier-grid-sections {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.8rem;
+}
+
+.dossier-section {
+  background: #1c2838;
+  border: 3px solid #000;
+  padding: 1.5rem;
+  box-shadow: 4px 4px 0px #000;
+}
+
+.dossier-section-title {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 0.75rem;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-shadow: 1px 1px 0px #000;
+}
+
+.contributions-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.contributions-list li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.8rem;
+  color: #dcdde1;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.contributions-list li::before {
+  content: "▶";
+  position: absolute;
+  left: 0;
+  top: 2px;
+  color: #00d2d3;
+  font-size: 0.7rem;
+}
+
+/* Skills Grid Table */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 0.8rem;
+}
+
+.skill-item {
+  background: #121924;
+  border: 2px solid #000;
+  padding: 0.85rem 1.1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.2rem;
+  box-shadow: 2px 2px 0px #000;
+  min-height: 4.2rem;
+}
+
+.skill-name {
+  flex: 1;
+  font-size: 0.82rem;
+  color: #f5f6fa;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.hard-skill-badge {
+  flex-shrink: 0;
+  width: 145px;
+  text-align: center;
+  white-space: nowrap;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 0.42rem;
+  padding: 0.45rem 0.5rem;
+  border: 2px solid #000 !important;
+  box-shadow: 2px 2px 0px #000;
+  font-weight: bold;
+  letter-spacing: 0.03em;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.15s ease, background-color 0.15s ease, color 0.15s ease;
+}
+
+.hard-skill-badge.skill-level-autonomia {
+  background-color: #2ed573 !important;
+  color: #000000 !important;
+}
+
+.hard-skill-badge.skill-level-autonomia:hover {
+  background-color: #218c4a !important;
+  color: #ffffff !important;
+  transform: translateY(-2px);
+  box-shadow: 3px 3px 0px #000;
+}
+
+.hard-skill-badge.skill-level-orientacao {
+  background-color: #f39c12 !important;
+  color: #000000 !important;
+}
+
+.hard-skill-badge.skill-level-orientacao:hover {
+  background-color: #d35400 !important;
+  color: #ffffff !important;
+  transform: translateY(-2px);
+  box-shadow: 3px 3px 0px #000;
+}
+
+
+
+.soft-skills-box {
+  background: #24142c;
+  border: 3px solid #9b59b6;
+  padding: 1.2rem;
+  color: #f1f2f6;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  box-shadow: 4px 4px 0px #000;
+}
+
+@media (max-width: 768px) {
+  .academic-showcase {
+    padding: 2.5rem 0;
+  }
+
+  /* Mobile Semester Selector Tabs Layout */
+  .semester-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    justify-content: space-between;
+    padding: 0 0.2rem;
+  }
+
+  /* 1st Tab: TODOS (1º AO 6º) on its own line taking 100% width */
+  .semester-tab:first-child {
+    width: 100%;
+    flex: 0 0 100%;
+    font-size: 0.6rem;
+    padding: 0.75rem 0.5rem;
+    text-align: center;
+  }
+
+  /* Semester Tabs (1º, 2º, 3º, 4º, 5º, 6º): 2 per row (50% width each) */
+  .semester-tab:not(:first-child) {
+    width: calc(50% - 0.3rem);
+    flex: 0 0 calc(50% - 0.3rem);
+    font-size: 0.52rem;
+    padding: 0.65rem 0.2rem;
+    text-align: center;
+    box-sizing: border-box;
+  }
+
+  .academic-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .academic-title,
+  .academic-problem-block,
+  .academic-role-block,
+  .academic-tags {
+    min-height: auto;
+  }
+
+  .academic-card {
+    padding: 1.2rem;
+  }
+
+  /* Detailed Dossier Mobile View */
+  .dossier-container {
+    padding: 0 0.2rem;
+  }
+
+  .dossier-card {
+    padding: 1.2rem 1rem;
+    overflow-x: hidden;
+  }
+
+  .dossier-top-bar {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.8rem;
+  }
+
+  .btn-back-grid {
+    width: 100%;
+    text-align: center;
+    font-size: 0.5rem;
+    padding: 0.65rem 0.5rem;
+  }
+
+  .dossier-title-main {
+    font-size: 0.85rem;
+    line-height: 1.5;
+    word-break: break-word;
+    overflow-wrap: anywhere;
+  }
+
+  .dossier-section {
+    padding: 1rem;
+  }
+
+  .dossier-section-title {
+    font-size: 0.65rem;
+    line-height: 1.4;
+    word-break: break-word;
+    overflow-wrap: anywhere;
+  }
+
+  .contributions-list li {
+    font-size: 0.82rem;
+    padding-left: 1.2rem;
+    word-break: break-word;
+    overflow-wrap: anywhere;
+  }
+
+  .academic-text {
+    font-size: 0.82rem;
+    word-break: break-word;
+    overflow-wrap: anywhere;
+  }
+
+  /* Hard Skills Grid on Mobile */
+  .skills-grid {
+    grid-template-columns: 1fr;
+    gap: 0.8rem;
+  }
+
+  .skill-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+    min-height: auto;
+    padding: 0.8rem;
+  }
+
+  .hard-skill-badge {
+    width: 100%;
+    font-size: 0.45rem;
+    padding: 0.45rem 0.3rem;
+  }
+
+  .btn-academic-repo,
+  .btn-academic-detail {
+    font-size: 0.5rem;
+    padding: 0.65rem 0.3rem;
+    word-break: break-word;
+  }
+}
