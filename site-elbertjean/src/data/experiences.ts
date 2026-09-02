@@ -5,9 +5,9 @@ export const experiencesData: ExperienceItem[] = [
     id: "spotsat",
     title: "Desenvolvedor Front-end Pleno",
     company: "SpotSat",
-    date: "Maio 2023 - Atualmente",
-    status: "EM ANDAMENTO",
-    statusClass: "ongoing",
+    date: "Maio 2023 - Maio 2026",
+    status: "COMPLETA",
+    statusClass: "",
     isLight: false,
     tasks: [
       "Atuação como principal responsável pelo ecossistema front-end (React/TypeScript), garantindo a sustentação de 4 plataformas web em produção e liderando a arquitetura e desenvolvimento de um novo sistema do zero.",
