@@ -14,10 +14,10 @@ const Hero: React.FC = () => {
           <span className="hero-tag">[ PLAYER 1 - READY ]</span>
           <h1 className="hero-name">ELBERT JEAN DOS SANTOS</h1>
           <h2 className="hero-tag" style={{ color: 'var(--snes-yellow)', fontSize: '0.8rem', marginBottom: '1.5rem' }}>
-            DESENVOLVEDOR FRONT-END PLENO & FULLSTACK
+            DESENVOLVEDOR FULLSTACK
           </h2>
           <p className="hero-desc">
-            Com 30 anos e residente em São José dos Campos/SP, sou <strong>Desenvolvedor Front-end Pleno</strong> com sólida experiência de <strong>mais de 3 anos</strong> na construção de aplicações web de alta performance com <strong>React, TypeScript e Node.js</strong>. Atuo na sustentação de plataformas em produção, criação de dashboards analíticos, sistemas com geoprocessamento e desenvolvimento ponta a ponta dos SaaS <strong>EVinil</strong> e <strong>RotinaBusiness</strong>.
+            <strong>Desenvolvedor Full Stack</strong> com <strong>mais de 3 anos</strong> de experiência profissional em aplicações web, com forte atuação em <strong>React</strong> e <strong>TypeScript</strong> e experiência em backend com <strong>Node.js</strong>, <strong>NestJS</strong>, <strong>Java</strong>, <strong>Spring Boot</strong>, <strong>Python</strong> e <strong>Django</strong>. Atuo no desenvolvimento e sustentação de plataformas em produção, dashboards analíticos, soluções de geoprocessamento e produtos SaaS desenvolvidos ponta a ponta, como <strong>EVinil</strong> e <strong>RotinaBusiness</strong>.
           </p>
           <div className="hero-actions">
             <a href="/curriculo.pdf" download="Curriculo_Elbert_Jean.pdf" target="_blank" rel="noopener noreferrer" className="btn-pixel btn-yellow">

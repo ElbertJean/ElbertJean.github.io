@@ -9,15 +9,21 @@ const AboutSection: React.FC = () => {
         <h2 className="section-title">SOBRE MIM</h2>
         <div className="about-grid">
           <div className="pixel-box rpg-dialog">
-            <div className="pixel-box-header">💬 SISTEMA DE DIÁLOGO RPG</div>
+            <div className="pixel-box-header">👾 PLAYER PROFILE // SOBRE MIM</div>
             <p>
-              Olá! Eu sou o Elbert Jean, <strong>Desenvolvedor Front-end Pleno</strong> com forte atuação <strong>Full Stack</strong> e mais de 3 anos de experiência no desenvolvimento e sustentação de sistemas web escaláveis em produção.
+              Olá! Eu sou o Elbert Jean, <strong>Desenvolvedor Full Stack</strong>, residente em São José dos Campos/SP, com <strong>mais de 3 anos</strong> de experiência profissional no desenvolvimento e evolução de aplicações web em produção.
             </p>
             <p>
-              Especialista no ecossistema <strong>React</strong> e <strong>TypeScript</strong>, também construo soluções de backend com <strong>Node.js, NestJS, TypeORM, PostgreSQL e MySQL</strong>. Minha atuação abrange desde a arquitetura de componentes e integrações com APIs REST até dashboards analíticos e geoprocessamento.
+              Minha principal especialidade está no ecossistema <strong>React</strong> e <strong>TypeScript</strong>, trabalhando com arquitetura de componentes, gerenciamento de estado, integrações com APIs REST, dashboards analíticos, performance e soluções de geoprocessamento com <strong>Leaflet</strong> e <strong>GeoJSON</strong>.
             </p>
             <p>
-              Como idealizador das plataformas SaaS <strong>EVinil</strong> e <strong>RotinaBusiness</strong>, gerenciei o ciclo de vida dos produtos do zero à publicação: modelagem de banco de dados, autenticação, integração de pagamentos recorrentes e infraestrutura cloud, unindo decisões técnicas a insights de negócio reais.
+              No backend, desenvolvo soluções utilizando <strong>Node.js</strong>, <strong>NestJS</strong>, <strong>TypeORM</strong>, <strong>Java</strong>, <strong>Spring Boot</strong>, <strong>Python</strong> e <strong>Django</strong>, trabalhando com APIs REST, autenticação, regras de negócio e bancos relacionais como <strong>PostgreSQL</strong> e <strong>MySQL</strong>.
+            </p>
+            <p>
+              Também sou responsável pelo desenvolvimento ponta a ponta dos produtos <strong>EVinil</strong> e <strong>RotinaBusiness</strong>, passando por UX/UI, arquitetura, modelagem de dados, frontend, backend, autenticação, infraestrutura, pagamentos recorrentes e publicação das aplicações.
+            </p>
+            <p>
+              Gosto de transformar problemas reais em produtos funcionais, pensando não apenas no código, mas também em arquitetura, performance, escalabilidade, experiência do usuário e evolução do produto.
             </p>
           </div>
 
