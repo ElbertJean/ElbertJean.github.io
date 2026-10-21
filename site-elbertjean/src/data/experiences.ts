@@ -2,32 +2,31 @@ import { ExperienceItem } from '../types';
 
 export const experiencesData: ExperienceItem[] = [
   {
+    id: "iacit",
+    title: "Analista P&D Júnior",
+    company: "IACIT",
+    date: "Out 2026 - Atualmente",
+    status: "EM ANDAMENTO",
+    statusClass: "ongoing",
+    isLight: false,
+    tasks: [
+      "Atuação no setor de Pesquisa e Desenvolvimento (P&D), participando da concepção, desenvolvimento e sustentação de soluções tecnológicas críticas e inovadoras.",
+      "Colaboração em projetos de engenharia de software com foco em qualidade técnica, boas práticas de arquitetura e sistemas de alta confiabilidade."
+    ]
+  },
+  {
     id: "spotsat",
     title: "Desenvolvedor Front-end Pleno",
     company: "SpotSat",
     date: "Maio 2023 - Maio 2026",
     status: "COMPLETA",
     statusClass: "",
-    isLight: false,
+    isLight: true,
     tasks: [
       "Atuação como principal responsável pelo ecossistema front-end (React/TypeScript), garantindo a sustentação de 4 plataformas web em produção e liderando a arquitetura e desenvolvimento de um novo sistema do zero.",
       "Implementação de soluções avançadas de geoprocessamento em tempo real utilizando Leaflet e GeoJSON, otimizando a renderização dinâmica de milhares de coordenadas simultâneas com alta performance.",
       "Desenvolvimento de painéis analíticos complexos e 2 sistemas automatizados para emissão de relatórios técnicos, processando grandes volumes de dados para validar a conformidade de propriedades e agilizar a tomada de decisão dos clientes.",
       "Idealização e criação de protótipos de interface (UX/UI) no Figma antes do código, além da definição proativa da arquitetura de componentes e integrações com APIs REST, assegurando escalabilidade e a melhor experiência para o usuário."
-    ]
-  },
-  {
-    id: "ej-informatica",
-    title: "Técnico de TI (Autônomo)",
-    company: "EJ Informática",
-    date: "Nov 2021 - Atualmente",
-    status: "ATUAÇÃO SOB DEMANDA",
-    statusClass: "on-demand",
-    isLight: true,
-    tasks: [
-      "Prestação de serviços autônomos de suporte técnico, realizando diagnóstico e manutenção preventiva e corretiva de computadores e notebooks, com identificação de falhas em hardware e software.",
-
-      "Montagem e configuração de computadores, upgrades e substituição de componentes, formatação e instalação de sistemas operacionais, limpeza e otimização de equipamentos, além de configuração de softwares e suporte direto ao cliente."
     ]
   },
   {
